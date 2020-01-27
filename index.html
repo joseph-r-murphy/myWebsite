@@ -1,1 +1,32 @@
-<h1>Hello!</h1>
+<html>
+<title>My Website</title>
+<body>
+<div class="top">
+<h1>Home</h1>
+<ul>	
+  <li><a class="active" href=Home2.html>Home</a></li>
+  <li><a href=Name2.html>Name Entering</a></li>
+  <li><a href=Rota2.html>Rota Maker</a></li>
+</ul>
+<div>
+<p>This website will allow you to add details of people into a database and add these names into a rota of work.<p/>
+</div>
+<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("im");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";  
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}    
+    x[myIndex-1].style.display = "block";  
+    setTimeout(carousel, 500); 
+}
+</script>  
+
+</body>
+</html>
